@@ -21,7 +21,7 @@ function setup() {
 function draw() {
   //draw background image to fill the canvas
   image(shopext, 0, 0, width, height);
-  
+
   
   //make door size fluctuate
   //https://editor.p5js.org/dansakamoto/sketches/H1ICcXXtm
@@ -35,4 +35,19 @@ let dHeight = 150 + sin(theta) * maxHeight;
   
   //make theta keep getting bigger and control speed
   theta += .05; 
+
+  //if mouse is clicked, run function click
+  //https://editor.p5js.org/carriehott/sketches/2WOdFyIaR
+  if(mouseIsPressed){
+      click ();
+  }
+}
+
+function click(){
+  //calculates the distance between cursor and center of door
+  let button = dist(mouseX, mouseY, width/2, height - height/3.2);
+  //if the distance is less than or equal to 180, go to page 2
+  if (button <=180){
+    window.location.href = "page2.html";
+  }
 }
