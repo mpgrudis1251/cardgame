@@ -3,7 +3,7 @@
 let topy = 200;
 let bottomy = 450
 let speed=3;
-let gravity= 0.2;
+let gravity= 0.5;
 
 //variables to adjust asset sizes
 var countersize = 0.125
@@ -33,7 +33,7 @@ function draw() {
   //creat a white background
   background('white');
   
-   frameRate(11);
+   frameRate(12);
    textSize(24);
   text("X: "+mouseX, 0, height/4);
   text("Y: "+mouseY, 0, height/2);
