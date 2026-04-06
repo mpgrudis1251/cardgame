@@ -1,14 +1,17 @@
+//variable to adjust sizes
+let ratio;
+
 //variables for bouncing cards
 //https://editor.p5js.org/ellacyt/sketches/B1lmPZgoZ
-let topy = 200;
-let bottomy = 450
-let speed=3;
-let gravity= 0.5;
+let topy;
+let bottomy;
+let speed;
+let gravity;
 
 //variables to adjust asset sizes
-var countersize = 0.125
-var shelfsize = 0.2
-var packsize = 0.125
+var countersize;
+var shelfsize;
+var packsize;
 
 function preload(){
   //preload counter, shelf, card packs, and Michael images
@@ -25,8 +28,23 @@ function preload(){
 }
 
 function setup() {
+ //variable to adjust sizes
+ratio = (windowHeight/900);
+
+//variables for bouncing cards
+//https://editor.p5js.org/ellacyt/sketches/B1lmPZgoZ
+topy = 200 * ratio;
+bottomy = 450 * ratio
+speed=0.5;
+gravity= 0.5;
+
+//variables to adjust asset sizes
+countersize = 0.125 * ratio;
+shelfsize = 0.2 *ratio;
+packsize = 0.125 * ratio
+
   //set canvas size
-  createCanvas(1440, 900);
+  createCanvas(1440 * ratio, 900 * ratio);
 }
 
 function draw() {
@@ -39,26 +57,26 @@ function draw() {
   text("Y: "+mouseY, 0, height/2);
   
   // draw counter
-  image(counter, 700, 400, 4404 * countersize * 1.25, 3573 * countersize)
+  image(counter, 700 * ratio, 400 * ratio, 4404 * countersize * 1.25, 3573 * countersize)
 
 // draw shelves
-  image(shelf, 100,600, 2605 * shelfsize, 394 * shelfsize * 0.5)
-  image(shelf, 100,350, 2605 * shelfsize, 394 * shelfsize * 0.5)
+  image(shelf, 100 * ratio,600 * ratio, 2605 * shelfsize, 394 * shelfsize * 0.5)
+  image(shelf, 100 * ratio,350 * ratio, 2605 * shelfsize, 394 * shelfsize * 0.5)
   
   //draw card packs
-  image(R, 150, topy, 706 * packsize, 901 * packsize);
-  image(O, 310, topy, 706 * packsize, 901 * packsize);
-  image(Y, 460, topy, 706 * packsize, 901 * packsize);
-   image(G, 150, bottomy, 706 * packsize, 901 * packsize);
-  image(B, 310, bottomy, 706 * packsize, 901 * packsize);
-  image(P, 460, bottomy, 706 * packsize, 901 * packsize);
+  image(R, 150 * ratio, topy, 706 * packsize, 901 * packsize);
+  image(O, 310 * ratio, topy, 706 * packsize, 901 * packsize);
+  image(Y, 460 * ratio, topy, 706 * packsize, 901 * packsize);
+   image(G, 150 * ratio, bottomy, 706 * packsize, 901 * packsize);
+  image(B, 310 * ratio, bottomy, 706 * packsize, 901 * packsize);
+  image(P, 460 * ratio, bottomy, 706 * packsize, 901 * packsize);
   
   //set up card pack motion
   topy=topy+speed;
   bottomy=bottomy+speed;
   speed=speed+gravity;
   
-  if(topy>240){
+  if(topy>240 * ratio){
   //reverse the speed
     speed=-0.99 *speed;
   }
