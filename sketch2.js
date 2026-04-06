@@ -31,9 +31,9 @@ function setup() {
 
 function draw() {
   //creat a white background
-  background('lavender');
+  background('white');
   
-   frameRate(12);
+   frameRate(11);
    textSize(24);
   text("X: "+mouseX, 0, height/4);
   text("Y: "+mouseY, 0, height/2);

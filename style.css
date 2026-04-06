@@ -4,5 +4,15 @@ html, body {
 }
 
 canvas {
-  display: block;
+  display: inlign-block;
 }
+
+#canvas-container {
+   width: 100%;
+   text-align:center;
+}
+
+body {
+  background-color: black
+}
+
