@@ -7,7 +7,7 @@ var ratio;
 
 function preload(){
   //preload background image
-  shopext = loadImage('/Assets/Card shop exterior.jpg')
+  shopext = loadImage('Assets/Card shop exterior.jpg')
 }
 
 function setup() {
@@ -54,6 +54,6 @@ function click(){
   let button = dist(mouseX, mouseY, width/2, height - height/3.2);
   //if the distance is less than or equal to 180, go to page 2
   if (button <=180 * ratio){
-    window.location.href = "page2.html";
+    window.location.href = "interior1.html";
   }
 }

@@ -33,8 +33,8 @@ ratio = (windowHeight/900);
 
 //variables for bouncing cards
 //https://editor.p5js.org/ellacyt/sketches/B1lmPZgoZ
-topy = 200 * ratio;
-bottomy = 450 * ratio
+topy = 220 * ratio;
+bottomy = 470 * ratio
 speed=0.5;
 gravity= 0.5;
 
@@ -72,12 +72,9 @@ function draw() {
   image(P, 460 * ratio, bottomy, 706 * packsize, 901 * packsize);
   
   //set up card pack motion
-  topy=topy+speed;
-  bottomy=bottomy+speed;
+  topy=topy + 5 * sin(speed);
+  bottomy=bottomy + 5 * sin(speed);
   speed=speed+gravity;
   
-  if(topy>240 * ratio){
-  //reverse the speed
-    speed=-0.99 *speed;
-  }
+  print(topy);
 }
