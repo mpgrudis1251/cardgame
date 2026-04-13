@@ -73,8 +73,8 @@ function draw() {
   image(P, 460 * ratio, bottomy, 706 * packsize, 901 * packsize);
   
   //set up card pack motion
-  topy=topy + 5 * sin(speed);
-  bottomy=bottomy + 5 * sin(speed);
+  topy=topy + ratio * 5 * sin(speed);
+  bottomy=bottomy + 5 * sin(speed) * ratio;
   speed=speed+gravity;
   
   print(topy);

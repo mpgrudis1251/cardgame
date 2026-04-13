@@ -155,7 +155,7 @@ function draw() {
   
   if (currentclick == 6){
     //reset card index
-    cardindex = 3;
+    cardindex = 2;
     
     //move back of card down
      back3y = back3y + (speed * ratio);
@@ -176,7 +176,7 @@ function draw() {
   
   if (currentclick == 8){
     //reset card index
-    cardindex = 4;
+    cardindex = 3;
     
     //move back of card down
      back4y = back4y + (speed * ratio);
@@ -197,7 +197,7 @@ function draw() {
   
   if (currentclick == 10){
     //reset card index
-    cardindex = 5;
+    cardindex = 4;
     
     //move back of card down
      back5y = back5y + (speed * ratio);
@@ -218,17 +218,18 @@ function draw() {
 
   if (currentclick == 12){
     //reset card index
-cardindex = 1
+cardindex = 0
 
-    //display all cards opened in this pack
-    image(cards[cardindex + 4], width/2 + (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
-    image(cards[cardindex + 3], width/2 - (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
-    image(cards[cardindex + 2], width/2 + (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
-    image(cards[cardindex + 1], width/2, height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
-    image(cards[cardindex], width/2 - (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+// display all cards drawn from the pack
+   image(cards[cardindex], width/2 - (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+   image(cards[cardindex + 1], width/2, height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+   image(cards[cardindex + 2], width/2 + (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+   image(cards[cardindex + 3], width/2 - (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+   image(cards[cardindex + 4], width/2 + (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
   }
 
   if (currentclick == 13){
+    //return back to the interior page
      window.location.href = "interior1.html";
   }
   

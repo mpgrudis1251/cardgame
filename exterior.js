@@ -38,8 +38,8 @@ imageMode(CENTER)
   
   //make door size fluctuate
   //https://editor.p5js.org/dansakamoto/sketches/H1ICcXXtm
-let dWidth = (180 * ratio) + sin(theta) * maxWidth ;
-let dHeight = (150 * ratio) + sin(theta) * maxHeight;
+let dWidth = (180 * ratio) + (ratio * sin(theta)) * maxWidth ;
+let dHeight = (150 * ratio) + (ratio * sin(theta)) * maxHeight;
 
   //draw door
  // fill('yellow');
