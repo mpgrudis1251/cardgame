@@ -30,6 +30,7 @@ function preload(){
 function setup() {
  //variable to adjust sizes
 ratio = (windowHeight/900);
+//ratio = 1
 
 //variables for bouncing cards
 //https://editor.p5js.org/ellacyt/sketches/B1lmPZgoZ
@@ -77,4 +78,44 @@ function draw() {
   speed=speed+gravity;
   
   print(topy);
+
+  //if mouse is clicked, run function click
+  //https://editor.p5js.org/carriehott/sketches/2WOdFyIaR
+  if(mouseIsPressed){
+      click ();
+  }
+}
+
+function click(){
+  //calculates the distance between cursor and center of each pack
+  let rbutton = dist(mouseX, mouseY, ratio * 210, ratio * 280);
+  let obutton = dist(mouseX, mouseY, ratio * 360, ratio * 280);
+  let ybutton = dist(mouseX, mouseY, ratio * 510, ratio * 280);
+  let gbutton = dist(mouseX, mouseY, ratio * 210, ratio * 530);
+  let bbutton = dist(mouseX, mouseY, ratio * 360, ratio * 530);
+  let pbutton = dist(mouseX, mouseY, ratio * 510, ratio * 530);
+  //if the distance is less than or equal to 70, go to the coorisponding pack page
+  if (pbutton <=70 * ratio){
+    window.location.href = "purple.html";
+  }
+
+  if (bbutton <=70 * ratio){
+    window.location.href = "blue.html";
+  }
+
+  if (gbutton <=70 * ratio){
+    window.location.href = "green.html";
+  }
+
+  if (ybutton <=70 * ratio){
+    window.location.href = "yellow.html";
+  }
+
+  if (obutton <=70 * ratio){
+    window.location.href = "orange.html";
+  }
+
+  if (rbutton <=70 * ratio){
+    window.location.href = "red.html";
+  }
 }
