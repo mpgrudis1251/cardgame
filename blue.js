@@ -217,12 +217,15 @@ function draw() {
   }
 
   if (currentclick == 12){
+    //reset card index
+cardindex = 1
+
     //display all cards opened in this pack
-   image(cards[cardindex], width/2 + (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
-    image(cards[cardindex - 1], width/2 - (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
-    image(cards[cardindex - 2], width/2 + (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
-    image(cards[cardindex - 3], width/2, height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
-    image(cards[cardindex - 4], width/2 - (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex + 4], width/2 + (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex + 3], width/2 - (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex + 2], width/2 + (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex + 1], width/2, height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex], width/2 - (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
   }
 
   if (currentclick == 13){
