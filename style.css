@@ -4,7 +4,9 @@ html, body {
 }
 
 canvas {
-  display: inlign-block;
+  display: block;
+  margin: auto;
+  //margin-top: 5%;
 }
 
 #canvas-container {
