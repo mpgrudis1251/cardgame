@@ -6,7 +6,6 @@ html, body {
 canvas {
   display: block;
   margin: auto;
-  //margin-top: 5%;
 }
 
 #canvas-container {

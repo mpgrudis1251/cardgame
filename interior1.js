@@ -54,8 +54,8 @@ function draw() {
   
    frameRate(12);
    textSize(24);
-  text("X: "+mouseX, 0, height/4);
-  text("Y: "+mouseY, 0, height/2);
+  //text("X: "+mouseX, 0, height/4);
+  //text("Y: "+mouseY, 0, height/2);
   
   // draw counter
   image(counter, 700 * ratio, 400 * ratio, 4404 * countersize * 1.25, 3573 * countersize)

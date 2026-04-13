@@ -7,7 +7,7 @@ var cardindex = 0;
 var currentcard;
 
 // Create an array and an index variable for the number of clicks
-var clicks = [1, 2, 3, 4, 5,6,7,8,9,10,11,12];
+var clicks = [1, 2, 3, 4, 5,6,7,8,9,10,11,12,13];
 var clickindex = 0;
 var currentclick;
 
@@ -214,6 +214,19 @@ function draw() {
   if (currentclick == 11){
 //card goes up off screen
     face5y = face5y - (speed * ratio);
+  }
+
+  if (currentclick == 12){
+    //display all cards opened in this pack
+   image(cards[cardindex], width/2 + (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex - 1], width/2 - (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex - 2], width/2 + (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex - 3], width/2, height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+    image(cards[cardindex - 4], width/2 - (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+  }
+
+  if (currentclick == 13){
+     window.location.href = "interior1.html";
   }
   
   print(currentclick);

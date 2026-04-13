@@ -7,7 +7,7 @@ var cardindex = 0;
 var currentcard;
 
 // Create an array and an index variable for the number of clicks
-var clicks = [1, 2, 3, 4, 5,6,7,8,9,10,11,12];
+var clicks = [1, 2, 3, 4, 5,6,7,8,9,10,11,12,13];
 var clickindex = 0;
 var currentclick;
 
@@ -216,6 +216,10 @@ function draw() {
     face5y = face5y - (speed * ratio);
   }
   
+  if (currentclick == 13){
+     window.location.href = "interior1.html";
+  }
+
   print(currentclick);
 }
 
