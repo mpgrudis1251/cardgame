@@ -13,6 +13,9 @@ var countersize;
 var shelfsize;
 var packsize;
 
+//set variables for if packs have been selected
+let red = true;
+
 function preload(){
   //preload counter, shelf, card packs, and Michael images
   counter = loadImage('Assets/Counter.png');
@@ -31,6 +34,14 @@ function setup() {
  //variable to adjust sizes
 ratio = (windowHeight/900);
 //ratio = 1
+
+//retrieve pack status when sketch starts
+let redOpen = getItem('redPack');
+
+//save pack status to pack variable
+if(redOpen !== null){
+  red = redOpen;
+}
 
 //variables for bouncing cards
 //https://editor.p5js.org/ellacyt/sketches/B1lmPZgoZ
@@ -52,7 +63,7 @@ function draw() {
   //creat a white background
   background('white');
   
-   frameRate(12);
+   //frameRate(12);
    textSize(24);
   //text("X: "+mouseX, 0, height/4);
   //text("Y: "+mouseY, 0, height/2);
@@ -64,8 +75,11 @@ function draw() {
   image(shelf, 100 * ratio,600 * ratio, 2605 * shelfsize, 394 * shelfsize * 0.5)
   image(shelf, 100 * ratio,350 * ratio, 2605 * shelfsize, 394 * shelfsize * 0.5)
   
-  //draw card packs
+  //draw card packs if they have not been opened prior
+
+  //if (redOpen = true3){
   image(R, 150 * ratio, topy, 706 * packsize, 901 * packsize);
+ // }
   image(O, 310 * ratio, topy, 706 * packsize, 901 * packsize);
   image(Y, 460 * ratio, topy, 706 * packsize, 901 * packsize);
    image(G, 150 * ratio, bottomy, 706 * packsize, 901 * packsize);
@@ -116,6 +130,11 @@ function click(){
   }
 
   if (rbutton <=70 * ratio){
+//set pack value as true so it does not appear on screen
+red = true;
+
+//store the status of the packk
+    storeItem('redPack', red);
     window.location.href = "red.html";
   }
 }

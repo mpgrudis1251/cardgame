@@ -10,6 +10,7 @@ var currentcard;
 var clicks = [1, 2, 3, 4, 5,6,7,8,9,10,11,12,13];
 var clickindex = 0;
 var currentclick;
+var clickcheck;
 
 function preload(){
   //load in pack image
@@ -74,6 +75,8 @@ function setup() {
   imageMode(CENTER);
   
   print(cards);
+
+  //clickcheck = true;
  
 }
 
@@ -111,6 +114,11 @@ function draw() {
   //open pack on first click
   if (currentclick == 1){
     packy = packy + (speed * ratio);
+
+    //set variable to false wen it reaches a point
+    if (packy => height * 6){
+    clickcheck = false;
+    }
   }
   
   //make the first face card go up
@@ -121,15 +129,21 @@ function draw() {
     if (face1y > height/2){
     face1y = face1y - (speed * ratio);
     }
-    //make card stop when it reaches
+    //make card stop when it reaches and set variable to false
     if (face1y <= height/2){
      face1y = height/2;
+     clickcheck = false;
     }
   }
   
   if (currentclick == 3){
 //card goes up off screen
     face1y = face1y - (speed * ratio);
+
+    //set variable to false wen it reaches a point
+    if (face1y <= (height - height * 6)){
+  clickcheck = false;
+    }
   }
   
   if (currentclick == 4){
@@ -142,15 +156,21 @@ function draw() {
     if (face2y > height/2){
     face2y = face2y - (speed * ratio);
     }
-    //make card stop when it reaches
+    //make card stop when it reaches and set variable to false
     if (face2y <= height/2){
      face2y = height/2;
+     clickcheck = false;
     }
   }
   
   if (currentclick == 5){
 //card goes up off screen
     face2y = face2y - (speed * ratio);
+
+    //set variable to false wen it reaches a point
+    if (face2y <= (height - height * 6)){
+  clickcheck = false;
+    }
   }
   
   if (currentclick == 6){
@@ -166,12 +186,18 @@ function draw() {
     //make card stop when it reaches
     if (face3y <= height/2){
      face3y = height/2;
+     clickcheck = false;
     }
   }
   
   if (currentclick == 7){
 //card goes up off screen
     face3y = face3y - (speed * ratio);
+
+    //set variable to false wen it reaches a point
+    if (face3y <= (height - height * 6)){
+  clickcheck = false;
+    }
   }
   
   if (currentclick == 8){
@@ -187,12 +213,18 @@ function draw() {
     //make card stop when it reaches
     if (face4y <= height/2){
      face4y = height/2;
+     clickcheck = false;
     }
   }
   
   if (currentclick == 9){
 //card goes up off screen
     face4y = face4y - (speed * ratio);
+
+    //set variable to false wen it reaches a point
+    if (face4y <= (height - height * 6)){
+  clickcheck = false;
+    }
   }
   
   if (currentclick == 10){
@@ -208,12 +240,18 @@ function draw() {
     //make card stop when it reaches
     if (face5y <= height/2){
      face5y = height/2;
+     clickcheck = false;
     }
   }
   
   if (currentclick == 11){
 //card goes up off screen
     face5y = face5y - (speed * ratio);
+
+    //set variable to false wen it reaches a point
+    if (face2y <= (height - height * 6)){
+  clickcheck = false;
+    }
   }
 
   if (currentclick == 12){
@@ -244,6 +282,9 @@ function mousePressed() {
   
   //sets the current click based on index and increases index
   currentclick = clicks[clickindex];
+  if (clickcheck == false){
   clickindex++;
-  
+  clickcheck = true
+}
+  //currentclick = 1
 }
