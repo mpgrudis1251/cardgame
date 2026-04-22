@@ -20,7 +20,7 @@ var shelfsize;
 var packsize;
 
 //set variables for if packs have been selected
-//var red = true;
+var red = true;
 
 //create strings of dialogue
 let intro1 ="Hey, what's up dude?";
@@ -56,12 +56,12 @@ ratio = (windowHeight/900);
 //ratio = 1
 
 //retrieve pack status when sketch starts
-//let redOpen = getItem('redPack');
+let redOpen = getItem('redPack');
 
 //save pack status to pack variable
-//if(redOpen !== null){
-  //red = redOpen;
-//}
+if(redOpen !== null){
+  red = redOpen;
+}
 
 //variables for bouncing cards
 //https://editor.p5js.org/ellacyt/sketches/B1lmPZgoZ
@@ -98,9 +98,9 @@ function draw() {
   
   //draw card packs if they have not been opened prior
 
-  //if (redOpen = true){
+  if (redOpen = true){
   image(R, 150 * ratio, topy, 706 * packsize, 901 * packsize);
-  //}
+  }
   image(O, 310 * ratio, topy, 706 * packsize, 901 * packsize);
   image(Y, 460 * ratio, topy, 706 * packsize, 901 * packsize);
    image(G, 150 * ratio, bottomy, 706 * packsize, 901 * packsize);
@@ -190,32 +190,32 @@ function click(){
   let bbutton = dist(mouseX, mouseY, ratio * 360, ratio * 530);
   let pbutton = dist(mouseX, mouseY, ratio * 510, ratio * 530);
   //if the distance is less than or equal to 70, go to the coorisponding pack page
-  if (pbutton <=70 * ratio && currentclick >= 6){
+  if (pbutton <=70 * ratio && currentclick== 5){
     window.location.href = "purple.html";
   }
 
-  if (bbutton <=70 * ratio && currentclick >= 6){
+  if (bbutton <=70 * ratio && currentclick == 5){
     window.location.href = "blue.html";
   }
 
-  if (gbutton <=70 * ratio && currentclick >= 6){
+  if (gbutton <=70 * ratio && currentclick == 5){
     window.location.href = "green.html";
   }
 
-  if (ybutton <=70 * ratio && currentclick >= 6){
+  if (ybutton <=70 * ratio && currentclick== 5){
     window.location.href = "yellow.html";
   }
 
-  if (obutton <=70 * ratio && currentclick >= 6){
+  if (obutton <=70 * ratio && currentclick == 5){
     window.location.href = "orange.html";
   }
 
-  if (rbutton <=70 * ratio && currentclick >= 6){
+  if (rbutton <=70 * ratio && currentclick == 5){
 //set pack value as true so it does not appear on screen
-//red = false;
+red = false;
 
 //store the status of the packk
-  //  storeItem('redPack', red);
+    storeItem('redPack', red);
     window.location.href = "red.html";
   }
 
