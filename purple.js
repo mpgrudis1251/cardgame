@@ -261,6 +261,8 @@ cardindex = 0
    image(cards[cardindex + 2], width/2 + (1438 * ratio * cardsize/2), height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
    image(cards[cardindex + 3], width/2 - (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
    image(cards[cardindex + 4], width/2 + (1438 * ratio * cardsize/4), height - height/4, 1438 * ratio * cardsize/2, 1438 * ratio * cardsize/2);
+
+   clickcheck = false;
   }
 
   if (currentclick == 13){
