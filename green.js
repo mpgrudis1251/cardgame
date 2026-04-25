@@ -266,7 +266,7 @@ cardindex = 0
   }
 
   if (currentclick == 13){
-     window.location.href = "interior1.html";
+     window.location.href = "interior5.html";
   }
   print(currentclick);
 }

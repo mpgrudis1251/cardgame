@@ -119,13 +119,13 @@ function draw() {
   //draw card packs if they have not been opened prior
 
   //if ((redOpen = true)) {
-    image(R, 150 * ratio, topy, 706 * packsize, 901 * packsize);
+   // image(R, 150 * ratio, topy, 706 * packsize, 901 * packsize);
   //}
-  image(O, 310 * ratio, 240 * ratio, 706 * packsize, 901 * packsize);
-  image(Y, 460 * ratio, 240 * ratio, 706 * packsize, 901 * packsize);
-  image(G, 150 * ratio, 490 * ratio, 706 * packsize, 901 * packsize);
-  image(B, 310 * ratio, 490 * ratio, 706 * packsize, 901 * packsize);
-  image(P, 460 * ratio, 490 * ratio, 706 * packsize, 901 * packsize);
+  //image(O, 310 * ratio, topy, 706 * packsize, 901 * packsize);
+  //image(Y, 460 * ratio, topy, 706 * packsize, 901 * packsize);
+ // image(G, 150 * ratio, bottomy, 706 * packsize, 901 * packsize);
+  //image(B, 310 * ratio, bottomy, 706 * packsize, 901 * packsize);
+  image(P, 460 * ratio, bottomy, 706 * packsize, 901 * packsize);
 
   //set up card pack motion
   topy = topy + ratio * 5 * sin(speed);
@@ -297,34 +297,34 @@ function click() {
   let bbutton = dist(mouseX, mouseY, ratio * 360, ratio * 530);
   let pbutton = dist(mouseX, mouseY, ratio * 510, ratio * 530);
   //if the distance is less than or equal to 70, go to the coorisponding pack page
- // if (pbutton <= 70 * ratio && currentclick == 5) {
-  //  window.location.href = "purple.html";
- // }
+  if (pbutton <= 70 * ratio && currentclick == 5) {
+    window.location.href = "purple.html";
+ }
 
   //if (bbutton <= 70 * ratio && currentclick == 5) {
     //window.location.href = "blue.html";
   //}
 
   //if (gbutton <= 70 * ratio && currentclick == 5) {
-    //window.location.href = "green.html";
- // }
+   // window.location.href = "green.html";
+ //}
 
   //if (ybutton <= 70 * ratio && currentclick == 5) {
     //window.location.href = "yellow.html";
   //}
 
   //if (obutton <= 70 * ratio && currentclick == 5) {
-   // window.location.href = "orange.html";
- // }
+    //window.location.href = "orange.html";
+  //}
 
-  if (rbutton <= 70 * ratio && currentclick == 5) {
+ // if (rbutton <= 70 * ratio && currentclick == 5) {
     //set pack value as true so it does not appear on screen
     red = false;
 
     //store the status of the packk
-    storeItem("redPack", red);
-    window.location.href = "red.html";
-  }
+  //  storeItem("redPack", red);
+    //window.location.href = "red.html";
+  //}
 
   currentclick = clicks[clickindex];
   if (clickcheck === true) {

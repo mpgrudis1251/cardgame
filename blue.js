@@ -270,7 +270,7 @@ cardindex = 0
 
   if (currentclick == 13){
     //return back to the interior page
-     window.location.href = "interior1.html";
+     window.location.href = "interior6.html";
   }
   
   print(currentclick);

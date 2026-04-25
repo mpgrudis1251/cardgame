@@ -23,14 +23,14 @@ var packsize;
 var red = true;
 
 //create strings of dialogue
-let intro1 = "Hey, what's up dude?";
+let intro1 = "We accept Robux, Takis, and loose quarters for payment.";
 
-let intro2 = "Welcome to Mr. Michael's Card Shop!";
+let intro2 = "Oh, you don't wanna pay for it?";
 
-let intro3 = "We've got tons of cards here made by yours truly.";
+let intro3 = "...";
 
 let intro4 =
-  "Go ahead and check some of them out. There may even be some you recognize.";
+  "...ok...I guess.";
 
 let currentCharacter = 0;
 
@@ -119,10 +119,10 @@ function draw() {
   //draw card packs if they have not been opened prior
 
   //if ((redOpen = true)) {
-    image(R, 150 * ratio, topy, 706 * packsize, 901 * packsize);
+   // image(R, 150 * ratio, topy, 706 * packsize, 901 * packsize);
   //}
-  image(O, 310 * ratio, 240 * ratio, 706 * packsize, 901 * packsize);
-  image(Y, 460 * ratio, 240 * ratio, 706 * packsize, 901 * packsize);
+  //image(O, 310 * ratio, topy, 706 * packsize, 901 * packsize);
+  image(Y, 460 * ratio, topy, 706 * packsize, 901 * packsize);
   image(G, 150 * ratio, 490 * ratio, 706 * packsize, 901 * packsize);
   image(B, 310 * ratio, 490 * ratio, 706 * packsize, 901 * packsize);
   image(P, 460 * ratio, 490 * ratio, 706 * packsize, 901 * packsize);
@@ -159,8 +159,8 @@ function draw() {
     // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
     currentCharacter += 0.5;
 
-    if (currentCharacter == 17) {
-      currentCharacter = 17;
+    if (currentCharacter == 47) {
+      currentCharacter = 47;
       //make the variable true only once the text has all appeared
       clickcheck = true;
     }
@@ -192,9 +192,9 @@ function draw() {
     // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
     currentCharacter += 0.5;
 
-    if (currentCharacter == 30) {
+    if (currentCharacter == 24) {
       //make the variable true only once the text has all appeared
-      currentCharacter = 30;
+      currentCharacter = 24;
       clickcheck = true;
     }
   }
@@ -225,9 +225,9 @@ function draw() {
     // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
     currentCharacter += 0.5;
 
-    if (currentCharacter == 40) {
+    if (currentCharacter == 6) {
       //make the variable true only once the text has all appeared
-      currentCharacter = 40;
+      currentCharacter = 6;
       clickcheck = true;
     }
   }
@@ -258,9 +258,9 @@ function draw() {
     // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
     currentCharacter += 0.5;
 
-    if (currentCharacter == 60) {
+    if (currentCharacter == 11) {
       //make the variable true only once the text has all appeared
-      currentCharacter = 60;
+      currentCharacter = 11;
       clickcheck = true;
     }
   }
@@ -309,22 +309,22 @@ function click() {
     //window.location.href = "green.html";
  // }
 
-  //if (ybutton <= 70 * ratio && currentclick == 5) {
-    //window.location.href = "yellow.html";
-  //}
+  if (ybutton <= 70 * ratio && currentclick == 5) {
+    window.location.href = "yellow.html";
+  }
 
   //if (obutton <= 70 * ratio && currentclick == 5) {
-   // window.location.href = "orange.html";
- // }
+    //window.location.href = "orange.html";
+  //}
 
-  if (rbutton <= 70 * ratio && currentclick == 5) {
+ // if (rbutton <= 70 * ratio && currentclick == 5) {
     //set pack value as true so it does not appear on screen
     red = false;
 
     //store the status of the packk
-    storeItem("redPack", red);
-    window.location.href = "red.html";
-  }
+  //  storeItem("redPack", red);
+    //window.location.href = "red.html";
+  //}
 
   currentclick = clicks[clickindex];
   if (clickcheck === true) {
