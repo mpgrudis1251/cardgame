@@ -23,11 +23,11 @@ var packsize;
 var red = true;
 
 //create strings of dialogue
-let intro1 = "Hey, what's up dude?";
+let intro1 = "Yeah, this is pretty flippin' sweet.";
 
-let intro2 = "Welcome to Mr. Michael's Card Shop!";
+let intro2 = "I bet the guy who made these is really awesome...";
 
-let intro3 = "We've got tons of cards here made by yours truly.";
+let intro3 = "Some may even say he's the GOAT of cards.";
 
 let intro4 =
   "Go ahead and check some of them out. There may even be some you recognize.";
@@ -47,10 +47,9 @@ function preload() {
   B = loadImage("Assets/Minis/Blue pack mini.png");
   P = loadImage("Assets/Minis/Purple pack mini.png");
 
-  wave = loadImage("Assets/michael/wave.png");
-  arms = loadImage("Assets/michael/arms-up.png");
-  thumbs = loadImage("Assets/michael/thumbs.png");
-  presenting = loadImage("Assets/michael/presenting.png");
+  smug = loadImage("Assets/michael/smug.png");
+  thinking = loadImage("Assets/michael/thinking.png");
+  shrug = loadImage("Assets/michael/shrug.png");
   resting = loadImage('Assets/michael/resting.png');
 
   speech = loadImage("Assets/speech.png");
@@ -145,7 +144,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      wave,
+      smug,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -159,8 +158,8 @@ function draw() {
     // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
     currentCharacter += 0.5;
 
-    if (currentCharacter == 17) {
-      currentCharacter = 17;
+    if (currentCharacter == 31) {
+      currentCharacter = 31;
       //make the variable true only once the text has all appeared
       clickcheck = true;
     }
@@ -178,7 +177,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      arms,
+      thinking,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -192,9 +191,9 @@ function draw() {
     // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
     currentCharacter += 0.5;
 
-    if (currentCharacter == 30) {
+    if (currentCharacter == 40) {
       //make the variable true only once the text has all appeared
-      currentCharacter = 30;
+      currentCharacter = 40;
       clickcheck = true;
     }
   }
@@ -211,7 +210,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      thumbs,
+      shrug,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -225,47 +224,14 @@ function draw() {
     // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
     currentCharacter += 0.5;
 
-    if (currentCharacter == 40) {
+    if (currentCharacter == 33) {
       //make the variable true only once the text has all appeared
-      currentCharacter = 40;
+      currentCharacter = 33;
       clickcheck = true;
     }
   }
 
   if (currentclick == 4) {
-            //draw speech bubble
-    image(
-      speech,
-      400 * ratio,
-      -30 * ratio,
-      4500 * speechsize,
-      4500 * speechsize,
-    );
-
-    //draw the michael that is saying each line of dialogue
-    image(
-      presenting,
-      750 * ratio,
-      100 * ratio,
-      1174 * michaelsize,
-      1253 * michaelsize,
-    );
-
-    // The substring() method will return all the characters of a string between the starting and ending positions (starts at 0)
-    currentIntro = intro4.substring(0, currentCharacter);
-    text(currentIntro, 475 * ratio, 150 * ratio, 300 * ratio, 500 * ratio);
-
-    // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
-    currentCharacter += 0.5;
-
-    if (currentCharacter == 60) {
-      //make the variable true only once the text has all appeared
-      currentCharacter = 60;
-      clickcheck = true;
-    }
-  }
-
-  if (currentclick ==5){
     image(resting,       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -297,7 +263,7 @@ function click() {
   let bbutton = dist(mouseX, mouseY, ratio * 360, ratio * 530);
   let pbutton = dist(mouseX, mouseY, ratio * 510, ratio * 530);
   //if the distance is less than or equal to 70, go to the coorisponding pack page
-  if (pbutton <= 70 * ratio && currentclick == 5) {
+  if (pbutton <= 70 * ratio && currentclick == 4) {
     window.location.href = "purple.html";
  }
 

@@ -47,9 +47,8 @@ function preload() {
   B = loadImage("Assets/Minis/Blue pack mini.png");
   P = loadImage("Assets/Minis/Purple pack mini.png");
 
-  wave = loadImage("Assets/michael/wave.png");
-  arms = loadImage("Assets/michael/arms-up.png");
-  thumbs = loadImage("Assets/michael/thumbs.png");
+  happy = loadImage("Assets/michael/happy.png");
+  thinking = loadImage("Assets/michael/thinking.png");
   presenting = loadImage("Assets/michael/presenting.png");
   resting = loadImage('Assets/michael/resting.png');
 
@@ -145,7 +144,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      wave,
+      happy,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -178,7 +177,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      arms,
+      thinking,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -211,7 +210,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      thumbs,
+      presenting,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -280,7 +279,7 @@ function click() {
     //window.location.href = "yellow.html";
   //}
 
-  if (obutton <= 70 * ratio && currentclick == 5) {
+  if (obutton <= 70 * ratio && currentclick == 4) {
     window.location.href = "orange.html";
   }
 

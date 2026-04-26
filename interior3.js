@@ -47,10 +47,10 @@ function preload() {
   B = loadImage("Assets/Minis/Blue pack mini.png");
   P = loadImage("Assets/Minis/Purple pack mini.png");
 
-  wave = loadImage("Assets/michael/wave.png");
-  arms = loadImage("Assets/michael/arms-up.png");
-  thumbs = loadImage("Assets/michael/thumbs.png");
-  presenting = loadImage("Assets/michael/presenting.png");
+  money = loadImage("Assets/michael/money.png");
+  suprise = loadImage("Assets/michael/suprised.png");
+  stare = loadImage("Assets/michael/stare.png");
+  sad = loadImage("Assets/michael/sad.png");
   resting = loadImage('Assets/michael/resting.png');
 
   speech = loadImage("Assets/speech.png");
@@ -145,7 +145,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      wave,
+      money,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -178,7 +178,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      arms,
+      suprise,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -211,7 +211,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      thumbs,
+      stare,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -244,7 +244,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      presenting,
+      sad,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -266,7 +266,7 @@ function draw() {
   }
 
   if (currentclick ==5){
-    image(resting,       750 * ratio,
+    image(sad,       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
       1253 * michaelsize,);

@@ -47,10 +47,9 @@ function preload() {
   B = loadImage("Assets/Minis/Blue pack mini.png");
   P = loadImage("Assets/Minis/Purple pack mini.png");
 
-  wave = loadImage("Assets/michael/wave.png");
-  arms = loadImage("Assets/michael/arms-up.png");
-  thumbs = loadImage("Assets/michael/thumbs.png");
-  presenting = loadImage("Assets/michael/presenting.png");
+  shocked = loadImage("Assets/michael/shocked.png");
+  sleeve = loadImage("Assets/michael/sleeve.png");
+  money = loadImage("Assets/michael/money.png");
   resting = loadImage('Assets/michael/resting.png');
 
   speech = loadImage("Assets/speech.png");
@@ -145,7 +144,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      wave,
+      shocked,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -178,7 +177,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      arms,
+      sleeve,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -211,7 +210,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      thumbs,
+      money,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -272,7 +271,7 @@ function click() {
     //window.location.href = "blue.html";
   //}
 
-  if (gbutton <= 70 * ratio && currentclick == 5) {
+  if (gbutton <= 70 * ratio && currentclick == 4) {
     window.location.href = "green.html";
  }
 

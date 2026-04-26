@@ -23,14 +23,7 @@ var packsize;
 var red = true;
 
 //create strings of dialogue
-let intro1 = "Well, that's all my cards!";
-
-let intro2 = "I hope you enjoyed your time opening packs here.";
-
-let intro3 = "Feel free to hang out at the shop again soon!";
-
-let intro4 =
-  "Go ahead and check some of them out. There may even be some you recognize.";
+let intro1 = "Why are you still here? I'm trying to go home, man.";
 
 let currentCharacter = 0;
 
@@ -47,11 +40,7 @@ function preload() {
   B = loadImage("Assets/Minis/Blue pack mini.png");
   P = loadImage("Assets/Minis/Purple pack mini.png");
 
-  wave = loadImage("Assets/michael/wave.png");
-  arms = loadImage("Assets/michael/arms-up.png");
-  thumbs = loadImage("Assets/michael/thumbs.png");
-  presenting = loadImage("Assets/michael/presenting.png");
-  resting = loadImage('Assets/michael/resting.png');
+  stare = loadImage("Assets/michael/stare.png");
 
   speech = loadImage("Assets/speech.png");
 
@@ -145,7 +134,7 @@ function draw() {
 
     //draw the michael that is saying each line of dialogue
     image(
-      arms,
+      stare,
       750 * ratio,
       100 * ratio,
       1174 * michaelsize,
@@ -166,82 +155,8 @@ function draw() {
     }
   }
 
-  if (currentclick == 2) {
-        //draw speech bubble
-    image(
-      speech,
-      400 * ratio,
-      -30 * ratio,
-      4500 * speechsize,
-      4500 * speechsize,
-    );
-
-    //draw the michael that is saying each line of dialogue
-    image(
-      thumbs,
-      750 * ratio,
-      100 * ratio,
-      1174 * michaelsize,
-      1253 * michaelsize,
-    );
-
-    // The substring() method will return all the characters of a string between the starting and ending positions (starts at 0)
-    currentIntro = intro2.substring(0, currentCharacter);
-    text(currentIntro, 475 * ratio, 150 * ratio, 300 * ratio, 300 * ratio);
-
-    // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
-    currentCharacter += 0.5;
-
-    if (currentCharacter == 30) {
-      //make the variable true only once the text has all appeared
-      currentCharacter = 30;
-      clickcheck = true;
-    }
-  }
-
-  if (currentclick == 3) {
-            //draw speech bubble
-    image(
-      speech,
-      400 * ratio,
-      -30 * ratio,
-      4500 * speechsize,
-      4500 * speechsize,
-    );
-
-    //draw the michael that is saying each line of dialogue
-    image(
-      wave,
-      750 * ratio,
-      100 * ratio,
-      1174 * michaelsize,
-      1253 * michaelsize,
-    );
-
-    // The substring() method will return all the characters of a string between the starting and ending positions (starts at 0)
-    currentIntro = intro3.substring(0, currentCharacter);
-    text(currentIntro, 475 * ratio, 150 * ratio, 300 * ratio, 500 * ratio);
-
-    // Increase the current character so that we get a longer and longer substring above. Using fractional numbers allows us to slow down the pace.
-    currentCharacter += 0.5;
-
-    if (currentCharacter == 40) {
-      //make the variable true only once the text has all appeared
-      currentCharacter = 40;
-      clickcheck = true;
-    }
-  }
-
-  if (currentclick == 4) {
-  window.location.href = "exterior2.html";
-
-  }
-
-  if (currentclick ==5){
-    image(resting,       750 * ratio,
-      100 * ratio,
-      1174 * michaelsize,
-      1253 * michaelsize,);
+  if (currentclick ==2){
+window.location.href = "exterior2.html";
   }
 
   // draw counter
