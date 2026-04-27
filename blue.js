@@ -277,10 +277,6 @@ cardindex = 0
 }
 
 function mousePressed() {
-  // Loop through sequence if at last element
- // if (cardindex > 4) {
-   // cardindex = 0;
- // }
   
   //sets the current click based on index and increases index
   currentclick = clicks[clickindex];

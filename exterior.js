@@ -29,11 +29,14 @@ ratio = (windowHeight/900);
 }
 
 function draw() {
+  //create a white background
+  background('white')
+
 //center images
 imageMode(CENTER)
 
   //draw background image to fill the canvas
-  image(shopext, width/2, height/2, width, height);
+  image(shopext, width/2,height - height/2.7, width, height);
 
   
   //make door size fluctuate
@@ -42,9 +45,6 @@ let dWidth = (180 * ratio) + (ratio * sin(theta)) * maxWidth ;
 let dHeight = (150 * ratio) + (ratio * sin(theta)) * maxHeight;
 
   //draw door
- // fill('yellow');
-  //rectMode(CENTER);
-  //rect(width/2, height - height/3.2,dWidth, 100 * ratio + dHeight);
 image(door, width/2, height - height/3.7, dWidth, 100 * ratio + dHeight)
 
   
